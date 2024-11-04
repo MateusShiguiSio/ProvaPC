@@ -3,86 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desigualdade Social - Home</title>
-    <link rel="stylesheet" href="https://prova-pc-bj5c.vercel.app/">
-    <style>
-        /* Estilos para as abas */
-        .tabs {
-            display: flex;
-            cursor: pointer;
-            margin: 20px 0;
-        }
-
-        .tab {
-            padding: 10px 20px;
-            background-color: #ccc;
-            margin-right: 10px;
-            border: 1px solid #000;
-            border-radius: 5px;
-        }
-
-        .tab.active {
-            background-color: #FFD700; /* Amarelo */
-            color: black;
-        }
-
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #000;
-            border-radius: 5px;
-            background-color: #f8f8f8;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-    </style>
+    <title>Desigualdade Social</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header>
-        <div class="logo">
-            <h1>Desigualdade Social</h1>
-            <p>Conscientizando e Educando sobre os Desafios da Desigualdade Social</p>
-        </div>
+        <h1>Desigualdade Social</h1>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="./Pages/sobre.html">Sobre</a></li>
-                <li><a href="./Pages/informacoes.html">Informações</a></li>
-                <li><a href="mailto:mateus.rovaris@escola.pr.gov.br">Contato</a></li>
+                <li><a href="#" class="active" onclick="openTab(event, 'definicao')">O que é?</a></li>
+                <li><a href="#" onclick="openTab(event, 'causas')">Causas</a></li>
+                <li><a href="#" onclick="openTab(event, 'efeitos')">Efeitos</a></li>
+                <li><a href="#" onclick="openTab(event, 'conscientizacao')">Como Diminuí-la</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main>
-        <section class="hero">
-            <h2>Explorando a Desigualdade Social</h2>
-            <p>A desigualdade social é um fenômeno complexo que afeta milhões de pessoas em todo o mundo. Ela se manifesta em diversas formas, como a desigualdade econômica, de gênero, racial e educacional.</p>
-            <a href="https://veja.abril.com.br/coluna/maquiavel/deputada-trans-denuncia-pastor-por-sugerir-morte-de-pessoas-lgbts/" class="btn">Saiba Mais</a>
-        </section>
-
-        <!-- Abas -->
-        <div class="tabs">
-            <div class="tab active" onclick="openTab(event, 'causas')">Causas</div>
-            <div class="tab" onclick="openTab(event, 'consequencias')">Consequências</div>
-            <div class="tab" onclick="openTab(event, 'combate')">Combate</div>
+        <div id="definicao" class="tab-content active">
+            <h2>O que é Desigualdade Social?</h2>
+            <p>A desigualdade social refere-se à distribuição desigual de recursos e oportunidades entre diferentes grupos de pessoas em uma sociedade. Essa desigualdade pode se manifestar em várias dimensões, incluindo:</p>
+            <ul>
+                <li><strong>Renda:</strong> Diferenças significativas na distribuição de renda entre diferentes classes sociais.</li>
+                <li><strong>Educação:</strong> Acesso desigual à educação de qualidade, que perpetua ciclos de pobreza.</li>
+                <li><strong>Saúde:</strong> Acesso desigual a serviços de saúde, resultando em disparidades na saúde pública.</li>
+                <li><strong>Oportunidades de Trabalho:</strong> Diferenças na capacidade de conseguir empregos bem remunerados.</li>
+            </ul>
+            <p>Essas desigualdades podem ser influenciadas por fatores econômicos, sociais, políticos e históricos.</p>
         </div>
 
-        <!-- Conteúdo das Abas -->
-        <div id="causas" class="tab-content active">
-            <h3>Causas da Desigualdade Social</h3>
-            <p>A desigualdade social pode ser causada por diversos fatores, incluindo a falta de acesso à educação de qualidade, discriminação racial, desigualdade de gênero e políticas públicas ineficazes.</p>
-            <img src="causas.jpg" alt="Causas da Desigualdade Social" style="width:100%; height:auto;">
+        <div id="causas" class="tab-content">
+            <h2>Causas da Desigualdade Social</h2>
+            <p>A desigualdade social é um fenômeno complexo, e suas causas são multifacetadas. Algumas das principais causas incluem:</p>
+            <ul>
+                <li><strong>Educação:</strong> A falta de acesso à educação de qualidade é uma das principais causas da desigualdade. Crianças de famílias de baixa renda frequentemente não têm acesso a escolas de qualidade, o que perpetua o ciclo da pobreza.</li>
+                <li><strong>Discriminação:</strong> Racismo, sexismo e discriminação com base em orientação sexual ou deficiência contribuem para a marginalização de grupos. Esses fatores podem limitar o acesso a empregos, educação e serviços de saúde.</li>
+                <li><strong>Desigualdade Econômica:</strong> A concentração de riqueza nas mãos de poucos indivíduos ou famílias gera disparidades sociais significativas. A crescente diferença entre ricos e pobres é um problema que afeta a coesão social.</li>
+                <li><strong>Políticas Públicas Inadequadas:</strong> Políticas que não promovem a inclusão social, como a falta de programas de assistência social e de saúde, agravam a desigualdade.</li>
+                <li><strong>Globalização:</strong> A globalização pode levar à deslocalização de empregos e à exploração de trabalhadores em países em desenvolvimento, aumentando a desigualdade entre nações e dentro delas.</li>
+            </ul>
         </div>
-        <div id="consequencias" class="tab-content">
-            <h3>Consequências da Desigualdade Social</h3>
-            <p>As consequências da desigualdade social são profundas e incluem a marginalização de grupos vulneráveis, aumento da criminalidade, e dificuldades no acesso a serviços básicos como saúde e educação.</p>
-            <img src="consequencias.jpg" alt="Consequências da Desigualdade Social" style="width:100%; height:auto;">
-        </div>
-        <div id="combate" class="tab-content">
-            <h3>Combatendo a Desigualdade Social</h3>
-            <p>Para combater a desigualdade social, é essencial promover políticas públicas inclusivas, garantir acesso à educação de qualidade, e fomentar a igualdade de oportunidades para todos.</p>
-            <img src="combate.jpg"
+
+        <div id="efeitos" class="tab-content">
+            <h2>Efeitos da Desigualdade Social</h2>
+            <p>A desigualdade social tem efeitos profundos e duradouros sobre a sociedade. Alguns dos principais efeitos incluem:</p>
+            <ul>
+                <li><strong>Marginalização:</strong> Grupos vulneráveis, como minorias étnicas e pessoas de baixa renda, são frequentemente excluídos de oportunidades e serviços essenciais.</li>
+                <li><strong>Aumento da Criminalidade:</strong> A desigualdade pode levar ao aumento da violência e criminalidade em comunidades carentes, onde a falta de oportunidades gera desespero.</li>
+               
