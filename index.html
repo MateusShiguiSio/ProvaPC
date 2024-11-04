@@ -1,9 +1,43 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desigualdade Social - Home</title>
     <link rel="stylesheet" href="https://prova-pc-bj5c.vercel.app/">
+    <style>
+        /* Estilos para as abas */
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: #ccc;
+            margin-right: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        .tab.active {
+            background-color: #FFD700; /* Amarelo */
+            color: black;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -17,7 +51,7 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="./Pages/sobre.html">Sobre</a></li>
                 <li><a href="./Pages/informacoes.html">Informações</a></li>
-                <li><a href="mateus.rovaris@escola.pr.gov.br">Contato</a></li>
+                <li><a href="mailto:mateus.rovaris@escola.pr.gov.br">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -30,26 +64,25 @@
             <a href="https://veja.abril.com.br/coluna/maquiavel/deputada-trans-denuncia-pastor-por-sugerir-morte-de-pessoas-lgbts/" class="btn">Saiba Mais</a>
         </section>
 
-        <section class="features">
-            <div class="feature">
-                <h3>Causas da Desigualdade Social</h3>
-                <p>A desigualdade social pode ser causada por diversos fatores, incluindo a falta de acesso à educação de qualidade, discriminação racial, desigualdade de gênero e políticas públicas ineficazes.</p>
-                <img src="causas.jpg" alt="Causas da Desigualdade Social" style="width:100%; height:auto;">
-            </div>
-            <div class="feature">
-                <h3>Consequências da Desigualdade Social</h3>
-                <p>As consequências da desigualdade social são profundas e incluem a marginalização de grupos vulneráveis, aumento da criminalidade, e dificuldades no acesso a serviços básicos como saúde e educação.</p>
-                <img src="consequencias.jpg" alt="Consequências da Desigualdade Social" style="width:100%; height:auto;">
-            </div>
-            <div class="feature">
-                <h3>Combatendo a Desigualdade Social</h3>
-                <p>Para combater a desigualdade social, é essencial promover políticas públicas inclusivas, garantir acesso à educação de qualidade, e fomentar a igualdade de oportunidades para todos.</p>
-                <img src="combate.jpg" alt="Combatendo a Desigualdade Social" style="width:100%; height:auto;">
-            </div>
-        </section>
-    </main>
+        <!-- Abas -->
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(event, 'causas')">Causas</div>
+            <div class="tab" onclick="openTab(event, 'consequencias')">Consequências</div>
+            <div class="tab" onclick="openTab(event, 'combate')">Combate</div>
+        </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>© 2024 Desigualdade Social | Todos os direitos reservados.</p>
-    </footer ⬤
+        <!-- Conteúdo das Abas -->
+        <div id="causas" class="tab-content active">
+            <h3>Causas da Desigualdade Social</h3>
+            <p>A desigualdade social pode ser causada por diversos fatores, incluindo a falta de acesso à educação de qualidade, discriminação racial, desigualdade de gênero e políticas públicas ineficazes.</p>
+            <img src="causas.jpg" alt="Causas da Desigualdade Social" style="width:100%; height:auto;">
+        </div>
+        <div id="consequencias" class="tab-content">
+            <h3>Consequências da Desigualdade Social</h3>
+            <p>As consequências da desigualdade social são profundas e incluem a marginalização de grupos vulneráveis, aumento da criminalidade, e dificuldades no acesso a serviços básicos como saúde e educação.</p>
+            <img src="consequencias.jpg" alt="Consequências da Desigualdade Social" style="width:100%; height:auto;">
+        </div>
+        <div id="combate" class="tab-content">
+            <h3>Combatendo a Desigualdade Social</h3>
+            <p>Para combater a desigualdade social, é essencial promover políticas públicas inclusivas, garantir acesso à educação de qualidade, e fomentar a igualdade de oportunidades para todos.</p>
+            <img src="combate.jpg"
