@@ -8,9 +8,9 @@ body {
 }
 
 header {
-    background-color: #black; /* Azul escuro */
+    background-color: #000000; /* Azul escuro */
     padding: 20px;
-    color: #yellow; /* Branco sujo */
+    color: #FFFF00; /* Branco sujo */
     text-align: center;
 }
 
